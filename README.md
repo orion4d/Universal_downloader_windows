@@ -1,17 +1,12 @@
-# 🌐 Universal Downloader
+# 🌐 Universal Downloader — Portable Windows x64
 
 > **Application portable Windows de téléchargement vidéo/audio, extraction audio et capture de flux.**  
 > **Created by Orion4D — 2026**
 
-<!--
-Ajoute ici ta capture principale GitHub, par exemple :
+<img width="1547" height="1173" alt="image" src="https://github.com/user-attachments/assets/06df2840-4a19-40d4-88b0-c3d1cd60ad4b" />
 
-<img width="1600" alt="Universal Downloader" src="https://github.com/user-attachments/assets/TON-ID-IMAGE" />
--->
 
 - **Lien direct :** [UniversalDownloader-v1.0.2-Portable-win-x64.zip](https://github.com/orion4d/Universal_downloader_windows/releases/download/v1.0.2/UniversalDownloader-v1.0.2-Portable-win-x64.zip)
-
-## 🚀 Universal Downloader — Portable Windows x64
 
 **Universal Downloader** est une application Electron portable basée sur **yt-dlp**, **FFmpeg**, **FFprobe** et **Deno**.
 
