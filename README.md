@@ -9,6 +9,8 @@ Ajoute ici ta capture principale GitHub, par exemple :
 <img width="1600" alt="Universal Downloader" src="https://github.com/user-attachments/assets/TON-ID-IMAGE" />
 -->
 
+- **Lien direct :** [UniversalDownloader-v1.0.2-Portable-win-x64.zip](https://github.com/orion4d/Universal_downloader_windows/releases/download/v1.0.2/UniversalDownloader-v1.0.2-Portable-win-x64.zip)
+
 ## 🚀 Universal Downloader — Portable Windows x64
 
 **Universal Downloader** est une application Electron portable basée sur **yt-dlp**, **FFmpeg**, **FFprobe** et **Deno**.
@@ -542,97 +544,6 @@ Exemple GitHub avec user-attachments :
 
 ---
 
-## 🏗️ Compilation depuis les sources
-
-Cette section concerne uniquement les développeurs.
-
-L'utilisateur final n'a pas besoin de Node.js ou npm.
-
-### Prérequis de développement
-
-- Windows 10 / 11 x64
-- Node.js
-- npm
-
-### Installation des dépendances
-
-```bash
-npm install
-```
-
-ou :
-
-```text
-Setup-First-Run.bat
-```
-
----
-
-### Mode développement
-
-```bash
-npm start
-```
-
-ou :
-
-```text
-Start-Dev.bat
-```
-
----
-
-### Construire la version portable
-
-```text
-Build-Portable.bat
-```
-
-Le script effectue automatiquement :
-
-```text
-1. Vérification syntaxique JavaScript
-2. Smoke tests
-3. Tests de bindings UI
-4. Packaging Electron Windows x64
-5. Création du ZIP portable
-6. Génération SHA256
-```
-
-Résultat :
-
-```text
-release/
-├── UniversalDownloader-v1.x.x-Portable-win-x64.zip
-└── SHA256.txt
-```
-
----
-
-## 🧱 Architecture
-
-```text
-UniversalDownloader/
-├── assets/
-├── resources/
-│   └── bin/
-│       ├── yt-dlp.exe
-│       ├── ffmpeg.exe
-│       ├── ffprobe.exe
-│       └── deno.exe
-├── scripts/
-├── src/
-│   ├── backend/
-│   ├── renderer/
-│   ├── main.js
-│   └── preload.js
-├── tests/
-├── Build-Portable.bat
-├── forge.config.js
-└── package.json
-```
-
----
 
 ## 🔐 Architecture de sécurité Electron
 
@@ -660,42 +571,6 @@ contextIsolation: true
 ```
 
 Les outils externes sont lancés avec des arguments contrôlés sans passer par un shell de commande libre.
-
----
-
-## 🧪 Tests
-
-Le projet contient des tests de régression pour plusieurs éléments sensibles :
-
-- chargement du renderer
-- bindings de l'interface
-- logique portable
-- dossier `UD_download`
-- détection d'anciens chemins
-- gestion des URLs
-- composants backend principaux
-
-Commande :
-
-```bash
-npm run smoke
-```
-
----
-
-## 💡 Conseils
-
-### Garder yt-dlp à jour
-
-Si une plateforme cesse soudainement de fonctionner :
-
-```text
-Mise à jour de yt-dlp
-→ Nightly
-→ Mettre à jour
-```
-
-Le canal Stable peut ensuite être réutilisé lorsque le correctif est intégré dans une version stable.
 
 ---
 
@@ -785,25 +660,6 @@ Chaque composant tiers reste soumis à sa propre licence.
 - **Electron** — https://www.electronjs.org/
 - **FFmpeg** — https://ffmpeg.org/
 - **Deno** — https://deno.com/
-
----
-
-## 📄 Licence
-
-Ajoute ici la licence choisie pour le dépôt.
-
-Exemple :
-
-```text
-MIT License
-```
-
-Si tu ajoutes un fichier `LICENSE` à la racine du dépôt, tu peux remplacer cette section par :
-
-```markdown
-Ce projet est distribué sous licence MIT.  
-Voir le fichier [LICENSE](LICENSE).
-```
 
 ---
 
