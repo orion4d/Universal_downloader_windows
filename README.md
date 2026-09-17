@@ -1,74 +1,74 @@
 # 🌐 Universal Downloader — Portable Windows x64
 
-> **Application portable Windows de téléchargement vidéo/audio, extraction audio et capture de flux.**  
+> **Portable Windows application for video/audio downloading, audio extraction, and stream capturing.**  
 > **Created by Orion4D — 2026**
 
 <img width="1547" height="1173" alt="image" src="https://github.com/user-attachments/assets/06df2840-4a19-40d4-88b0-c3d1cd60ad4b" />
 
 
-- **Lien direct :** [UniversalDownloader-v1.0.2-Portable-win-x64.zip](https://github.com/orion4d/Universal_downloader_windows/releases/download/v1.0.2/UniversalDownloader-v1.0.2-Portable-win-x64.zip)
+- **Direct link:** [UniversalDownloader-v1.0.2-Portable-win-x64.zip](https://github.com/orion4d/Universal_downloader_windows/releases/download/v1.0.2/UniversalDownloader-v1.0.2-Portable-win-x64.zip)
 
-**Universal Downloader** est une application Electron portable basée sur **yt-dlp**, **FFmpeg**, **FFprobe** et **Deno**.
+**Universal Downloader** is a portable Electron application powered by **yt-dlp**, **FFmpeg**, **FFprobe**, and **Deno**.
 
-Elle permet d'analyser, télécharger, convertir et capturer des médias provenant de nombreuses plateformes, avec une interface graphique simple, une file d'attente, des profils de téléchargement, un historique local et des outils de diagnostic.
+It allows you to parse, download, convert, and capture media from numerous platforms, featuring a clean GUI, download queue, presets, local history, and built-in diagnostic tools.
 
-L'application est disponible en **français** et en **anglais**.
-
----
-
-## ✨ Fonctionnalités
-
-### 📥 Téléchargement intelligent
-
-- **Vidéo + Audio**
-- **Vidéo seule**
-- **Audio MP3**
-- **Fusion manuelle vidéo/audio**
-- **Formats automatiques ou sélection manuelle**
-- **Détection automatique de la plateforme**
-- **Aperçu avant téléchargement**
-  - miniature
-  - titre
-  - durée
-  - plateforme
-  - ID
-- **Téléchargement de la miniature en PNG**
-- **Normalisation automatique de certaines URL**
-- **Support des URL directes audio/vidéo**
-
-Universal Downloader utilise principalement les extracteurs de **yt-dlp**.  
-La compatibilité réelle dépend donc des plateformes actuellement prises en charge par yt-dlp.
+The interface is available in both **English** and **French**.
 
 ---
 
-### 🎯 Profils de téléchargement
+## ✨ Features
 
-Des profils rapides sont disponibles pour éviter de devoir sélectionner manuellement les formats à chaque téléchargement :
+### 📥 Smart Downloading
 
-- **Meilleure qualité — vidéo + audio**
-- **MP4 — jusqu'à 1080p**
-- **MP4 — jusqu'à 720p**
-- **MP3 — 192 kb/s**
-- **MP3 — 320 kb/s**
+- **Video + Audio**
+- **Video only**
+- **MP3 Audio**
+- **Manual Video/Audio muxing**
+- **Automatic formats or manual stream selection**
+- **Automatic platform detection**
+- **Pre-download media preview:**
+  - Thumbnail
+  - Title
+  - Duration
+  - Platform
+  - Media ID
+- **Download thumbnail as PNG**
+- **Automatic URL sanitization**
+- **Direct audio/video URL support**
 
-Les onglets détaillés restent disponibles pour choisir précisément un flux vidéo ou audio.
+Universal Downloader primarily relies on **yt-dlp** extractors.  
+Actual platform compatibility therefore depends on the services supported by yt-dlp.
 
 ---
 
-### 🎵 Extraction audio
+### 🎯 Download Profiles
 
-Universal Downloader peut extraire ou convertir l'audio vers le format MP3.
+Quick presets are available to avoid manually picking streams for each download:
 
-Profils disponibles :
+- **Best Quality — Video + Audio**
+- **MP4 — up to 1080p**
+- **MP4 — up to 720p**
+- **MP3 — 192 kbps**
+- **MP3 — 320 kbps**
+
+Dedicated tabs remain accessible to fine-tune and select specific audio or video streams.
+
+---
+
+### 🎵 Audio Extraction
+
+Universal Downloader can extract and convert audio to MP3 format.
+
+Available presets:
 
 ```text
-MP3 192 kb/s
-MP3 320 kb/s
+MP3 192 kbps
+MP3 320 kbps
 ```
 
-L'application utilise **FFmpeg** pour la conversion.
+Audio conversion is powered by **FFmpeg**.
 
-Les flux audio directs peuvent également être traités, par exemple :
+Direct audio streams are also supported, such as:
 
 ```text
 .mp3
@@ -82,46 +82,46 @@ Les flux audio directs peuvent également être traités, par exemple :
 
 ---
 
-### 🖼️ Téléchargement des miniatures
+### 🖼️ Thumbnail Download
 
-Après analyse d'une vidéo, le bouton :
+After parsing a video URL, the button:
 
 ```text
-Télécharger miniature PNG
+Download PNG Thumbnail
 ```
 
-permet d'enregistrer la miniature dans le dossier de téléchargement.
+saves the cover image directly to the download folder.
 
-Les miniatures JPG ou WebP sont converties en **PNG** lorsque cela est nécessaire.
+JPG or WebP thumbnails are automatically converted to **PNG** when required.
 
 ---
 
-### 📡 Capture de flux
+### 📡 Stream Capture
 
-Universal Downloader possède un mode **Capture flux** pour les médias compatibles non protégés par DRM.
+Universal Downloader includes a dedicated **Stream Capture** mode for compatible, non-DRM media.
 
-Cas d'utilisation :
+Use cases:
 
-- Live vidéo
-- Web radio
-- Flux audio direct
+- Live video streams
+- Web radios
+- Direct audio streams
 - HLS / M3U8
 - DASH / MPD
-- Capture d'une partie d'une VOD
+- Partial VOD capture
 
-Modes disponibles :
+Available modes:
 
 ```text
-Vidéo + Audio
-Audio uniquement
+Video + Audio
+Audio only
 ```
 
-Pour les vidéos à la demande, il est possible d'indiquer :
+For on-demand media (VOD), you can define:
 
-- un point de départ
-- une durée
+- Start time
+- Duration
 
-Exemples :
+Examples:
 
 ```text
 01:12:30
@@ -129,25 +129,25 @@ Exemples :
 90
 ```
 
-Pour les lives, la capture peut commencer au moment où l'utilisateur clique sur le bouton d'enregistrement.
+For live streams, recording starts as soon as you click the record button.
 
-> Universal Downloader n'est pas conçu pour contourner les DRM ou les systèmes de chiffrement protégés.
+> Universal Downloader is not designed to bypass DRM or proprietary encrypted streams.
 
 ---
 
-### 🔗 Support des flux directs
+### 🔗 Direct Stream Support
 
-Universal Downloader peut détecter et traiter directement certaines URL média sans passer par l'extracteur d'un site web.
+Universal Downloader detects and processes raw media URLs directly, bypassing site-specific extractors.
 
-Exemples :
+Examples:
 
 ```text
-https://example.com/audio.mp3
-https://example.com/live.m3u8
-https://example.com/stream.mpd
+[https://example.com/audio.mp3](https://example.com/audio.mp3)
+[https://example.com/live.m3u8](https://example.com/live.m3u8)
+[https://example.com/stream.mpd](https://example.com/stream.mpd)
 ```
 
-Formats typiques reconnus :
+Typical supported formats:
 
 ```text
 MP3
@@ -161,57 +161,56 @@ M3U8
 MPD
 ```
 
-**FFprobe** analyse le flux et **FFmpeg** assure l'enregistrement ou la conversion.
+**FFprobe** analyzes the stream metadata while **FFmpeg** handles recording and transcoding.
 
 ---
 
-### 📋 File d'attente
+### 📋 Download Queue
 
-La colonne de droite permet de gérer les téléchargements en cours et en attente.
+The right-hand panel manages active and queued downloads.
 
-Fonctions disponibles :
+Features:
 
-- ajout de plusieurs téléchargements
-- traitement séquentiel
-- progression en temps réel
-- pause de la file
-- reprise
-- suppression des éléments en attente
-- arrêt du téléchargement courant
-- arrêt et vidage de la file
-- journal d'activité détaillé
-
----
-
-### 📊 Historique local
-
-Universal Downloader peut mémoriser les téléchargements effectués.
-
-Informations enregistrées :
-
-- titre
-- plateforme
-- taille
-- date
-- URL source
-- chemin du fichier
-
-Actions disponibles depuis l'historique :
-
-- **▶ Ouvrir le fichier**
-- **📁 Afficher dans le dossier**
-- **URL Copier l'URL source**
-- **× Supprimer le fichier**
-
-L'historique peut être désactivé dans l'interface.
+- Multi-item queuing
+- Sequential processing
+- Real-time progress updates
+- Pause / Resume queue
+- Remove pending items
+- Cancel current download
+- Stop and clear entire queue
+- Detailed live activity log
 
 ---
 
-### 🔄 Mise à jour intégrée de yt-dlp
+### 📊 Local History
 
-Universal Downloader peut mettre à jour **yt-dlp directement depuis l'application**.
+Universal Downloader keeps a persistent record of completed downloads.
 
-Deux canaux sont proposés :
+Stored metadata:
+
+- Title
+- Platform
+- File size
+- Date & time
+- Source URL
+- Local file path
+
+Actions available from the history tab:
+
+- **▶ Open file**
+- **📁 Reveal in folder**
+- **URL Copy source URL**
+- **× Delete file**
+
+History logging can be disabled in the application settings.
+
+---
+
+### 🔄 Built-in yt-dlp Updater
+
+Universal Downloader can update **yt-dlp directly from within the app**.
+
+Two release channels are supported:
 
 ```text
 Stable
@@ -220,20 +219,20 @@ Nightly
 
 #### Stable
 
-Recommandé pour une utilisation normale.
+Recommended for general use.
 
 #### Nightly
 
-Reçoit plus rapidement les correctifs d'extracteurs lorsque YouTube, Vimeo ou d'autres plateformes modifient leur fonctionnement.
+Receives extractor patches faster whenever platforms like YouTube or Vimeo update their systems.
 
-> Seul **yt-dlp** est mis à jour depuis l'application.  
-> Universal Downloader lui-même est mis à jour manuellement via les Releases GitHub.
+> Only **yt-dlp** is updated from within the app.  
+> Universal Downloader itself is updated manually via GitHub Releases.
 
 ---
 
-### 🧰 Diagnostic intégré
+### 🧰 Built-in Diagnostics
 
-Le bouton **Diagnostic** vérifie la présence et la version des moteurs embarqués :
+The **Diagnostics** panel checks the presence and versions of all embedded binaries:
 
 ```text
 yt-dlp
@@ -242,36 +241,36 @@ FFprobe
 Deno
 ```
 
-Le diagnostic permet de repérer rapidement un problème lié aux outils internes.
+This makes troubleshooting local execution or binary issues fast and straightforward.
 
 ---
 
-## 🔒 Confidentialité YouTube
+## 🔒 YouTube Privacy Mode
 
-Universal Downloader possède un **Mode confidentialité YouTube**, activé par défaut.
+Universal Downloader features a **YouTube Privacy Mode**, enabled by default.
 
-Lorsqu'il est actif, l'application ignore pour YouTube :
+When active, the following are ignored for YouTube requests:
 
-- les cookies navigateur
+- Browser cookies
 - `cookies.txt`
-- le User-Agent personnalisé
-- l'impersonation Chrome
+- Custom User-Agent
+- Chrome impersonation
 
-Le but est d'éviter d'associer inutilement un téléchargement à une session Google authentifiée.
+The objective is to avoid binding downloads to an authenticated Google account unnecessarily.
 
-> Ce mode ne rend pas la connexion anonyme.  
-> L'adresse IP reste visible par les serveurs distants.
+> This mode does not provide complete anonymity.  
+> Your IP address remains visible to remote hosts.
 
 ---
 
-## 🔐 Options sites protégés / session
+## 🔐 Protected Sites / Session Options
 
-Certaines plateformes ou certains contenus peuvent nécessiter une session authentifiée.
+Certain websites or restricted contents require an authenticated user session.
 
-Universal Downloader permet d'utiliser :
+Universal Downloader supports:
 
 ```text
-Aucun
+None
 Firefox
 Chrome
 Edge
@@ -279,72 +278,72 @@ Brave
 cookies.txt
 ```
 
-### Cookies navigateur
+### Browser Cookies
 
-Les cookies peuvent être utiles pour :
+Cookies can be required for:
 
-- contenu privé
-- contenu réservé à un compte
-- contenu soumis à une confirmation d'âge
-- plateformes nécessitant une session valide
+- Private or unlisted videos
+- Account-restricted content
+- Age-restricted media
+- Platforms enforcing an active session
 
-Pour les sites publics, Universal Downloader essaie d'éviter l'utilisation inutile des cookies.
+For public content, Universal Downloader defaults to standard anonymous requests.
 
-Si la base de cookies Chrome / Edge / Firefox est verrouillée, l'application peut réessayer automatiquement **sans cookies** lorsqu'une extraction anonyme est possible.
+If the Chrome / Edge / Firefox cookie store is locked, the application can automatically fall back to **no cookies** when anonymous extraction is possible.
 
 ---
 
 ### User-Agent
 
-Le champ **User-Agent** permet de fournir manuellement une chaîne d'identification HTTP.
+The **User-Agent** input lets you manually pass a custom HTTP identification string.
 
-Exemple :
+Example:
 
 ```text
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...
 ```
 
-Dans la majorité des cas, il est recommandé de laisser ce champ vide.
+For most use cases, it is recommended to leave this field empty.
 
 ---
 
-### Impersonation Chrome
+### Chrome Impersonation
 
-L'option **Impersonation Chrome** tente de reproduire davantage le comportement réseau d'un navigateur Chrome.
+The **Chrome Impersonation** toggle instructs the underlying engine to mimic the network fingerprint of a standard Chrome desktop browser.
 
-Elle peut aider avec certaines protections anti-bot ou certains CDN.
+This can help bypass specific bot detection challenges or CDN blocks.
 
-Pour un téléchargement normal :
+Standard configuration:
 
 ```text
-User-Agent : vide
-Impersonation Chrome : désactivée
+User-Agent: Empty
+Chrome Impersonation: Disabled
 ```
 
-À utiliser uniquement si une plateforme bloque l'extraction standard.
+Enable only if a platform rejects standard extraction calls.
 
 ---
 
 ## 🎞️ Vimeo
 
-Vimeo peut nécessiter une session authentifiée pour certaines vidéos.
+Vimeo often requires an authenticated session for private, domain-restricted, or password-protected videos.
 
-Si l'extraction anonyme échoue :
+If anonymous extraction fails:
 
-1. Se connecter à Vimeo dans Firefox, Chrome, Edge ou Brave.
-2. Ouvrir **Options sites protégés / session**.
-3. Sélectionner le navigateur utilisé.
-4. Relancer l'analyse.
+1. Log into Vimeo via Firefox, Chrome, Edge, or Brave.
+2. Open **Protected Sites / Session Options**.
+3. Select the browser you logged in with.
+4. Retry the analysis.
 
-Si la base de cookies est verrouillée, fermer complètement le navigateur puis réessayer.
+If the browser's cookie database is locked, close the web browser entirely and try again.
 
 ---
 
-## 🌍 Plateformes
+## 🌍 Supported Platforms
 
-Universal Downloader est construit autour de **yt-dlp**.
+Universal Downloader is built around **yt-dlp**.
 
-Selon les extracteurs disponibles dans la version installée de yt-dlp, l'application peut fonctionner avec de nombreuses plateformes, notamment :
+Subject to the extractors included in the current yt-dlp release, the app supports hundreds of platforms, including:
 
 - YouTube
 - Vimeo
@@ -355,34 +354,34 @@ Selon les extracteurs disponibles dans la version installée de yt-dlp, l'applic
 - Twitter / X
 - Twitch
 - Reddit
-- et de nombreux autres sites
+- And many others
 
-> La compatibilité avec un site peut évoluer dans le temps.  
-> Le bouton de mise à jour de yt-dlp permet de récupérer rapidement les correctifs d'extracteurs.
+> Platform compatibility can change over time.  
+> Use the built-in yt-dlp update tool to pull downstream extractor fixes as soon as they are published.
 
 ---
 
-## 📦 Version portable
+## 📦 Portable Edition
 
-Universal Downloader est distribué sous forme d'une **archive ZIP portable Windows x64**.
+Universal Downloader is distributed as a **portable Windows x64 ZIP archive**.
 
-### Aucun installateur
+### No Installer Required
 
-L'utilisateur télécharge l'archive, la décompresse et lance :
+Simply download the archive, extract it anywhere, and execute:
 
 ```text
 UniversalDownloader.exe
 ```
 
-Aucune installation système n'est nécessaire.
+No system registry modifications or installation wizards.
 
 ---
 
-## ✅ Aucune dépendance à installer
+## ✅ Zero External Dependencies
 
-La version portable contient tout ce qui est nécessaire.
+The portable bundle ships with all runtime requirements included.
 
-L'utilisateur n'a pas besoin d'installer :
+You do **not** need to install:
 
 ```text
 Python
@@ -394,84 +393,84 @@ Deno
 yt-dlp
 ```
 
-Les moteurs nécessaires sont inclus dans l'application.
+All engines are embedded and pre-configured.
 
 ---
 
-## 📖 Guide d'utilisation
+## 📖 Quick Start Guide
 
-### 1. Télécharger et lancer l'application
+### 1. Download and Launch
 
-1. Télécharger la dernière version portable depuis la page **Releases** de GitHub.
-2. Décompresser complètement l'archive ZIP.
-3. Ouvrir le dossier obtenu.
-4. Lancer :
+1. Download the latest release from the GitHub **Releases** page.
+2. Extract the ZIP archive completely.
+3. Open the extracted folder.
+4. Launch:
 
 ```text
 UniversalDownloader.exe
 ```
 
-> Il est recommandé de placer l'application dans un dossier où Windows autorise l'écriture.
+> Ensure the extracted folder is placed in a directory with standard write permissions.
 
 ---
 
-### 2. Télécharger une vidéo
+### 2. Downloading a Video
 
 ```text
-1. Coller l'URL
-2. Cliquer sur Analyser
-3. Vérifier le titre et la miniature
-4. Choisir un profil ou un format manuel
-5. Cliquer sur Télécharger
+1. Paste the URL
+2. Click Parse
+3. Check the title and thumbnail preview
+4. Select a preset profile or manual stream
+5. Click Download
 ```
 
-Le téléchargement est ajouté à la file d'attente.
+The task will be queued and processed automatically.
 
 ---
 
-### 3. Télécharger uniquement l'audio
+### 3. Extracting Audio Only
 
 ```text
-1. Analyser l'URL
-2. Choisir le profil MP3 192 ou MP3 320
+1. Parse the media URL
+2. Choose MP3 192 kbps or MP3 320 kbps preset
 
-ou
+or
 
-3. Ouvrir l'onglet Audio MP3
-4. Choisir la piste
-5. Télécharger
-```
-
----
-
-### 4. Télécharger la miniature
-
-Après analyse :
-
-```text
-Télécharger miniature PNG
-```
-
-Le fichier est enregistré dans le dossier `UD_download`.
-
----
-
-### 5. Capturer un live
-
-```text
-1. Coller l'URL du live
-2. Analyser
-3. Ouvrir Capture flux
-4. Choisir Vidéo + Audio ou Audio uniquement
-5. Démarrer la capture
-6. Finaliser la capture lorsque nécessaire
+3. Open the MP3 Audio tab
+4. Select the desired audio track
+5. Click Download
 ```
 
 ---
 
-## 📁 Dossiers portables
+### 4. Downloading Cover Art
 
-La structure finale ressemble à ceci :
+Once parsed:
+
+```text
+Download PNG Thumbnail
+```
+
+The resulting PNG image is placed directly into the `UD_download` folder.
+
+---
+
+### 5. Capturing Live Streams
+
+```text
+1. Paste the live stream URL
+2. Click Parse
+3. Open Stream Capture
+4. Choose Video + Audio or Audio only
+5. Click Start Capture
+6. Stop and finalize the recording when done
+```
+
+---
+
+## 📁 Portable Directory Layout
+
+The application operates within its self-contained directory:
 
 ```text
 UniversalDownloader/
@@ -483,173 +482,167 @@ UniversalDownloader/
 
 ### `UD_download`
 
-Dossier par défaut pour :
+Default destination directory for:
 
-- vidéos
-- audios
-- captures de flux
-- miniatures
+- Videos
+- Extracted audio tracks
+- Stream recordings
+- Cover thumbnails
 
-Par défaut, il est créé **à côté de l'exécutable**.
+By default, it is generated **next to the executable**.
 
-Si l'application est déplacée sur un autre disque, le dossier par défaut suit automatiquement l'application.
-
-L'utilisateur peut également sélectionner un autre dossier depuis l'interface.
+If the portable folder is moved to another drive, the download folder follows automatically. You can also pick a custom path from the settings.
 
 ---
 
 ### `UD_data`
 
-Contient les données locales de l'application :
+Contains user configurations and persistent local data:
 
 ```text
 settings.json
 download_history.json
 ```
 
-Ce dossier permet à Universal Downloader de rester réellement portable.
+This self-contained structure ensures real portability without leaving files behind in user directories.
 
 ---
 
-## 🖼️ Captures d'écran
+## 🖼️ Screenshots
 
-Tu peux ajouter tes captures dans un dossier :
+You can store your screenshots in:
 
 ```text
 docs/screenshots/
 ```
 
-Puis utiliser par exemple :
+Reference them in Markdown like this:
 
 ```markdown
-![Interface principale](docs/screenshots/main-interface.png)
+![Main Interface](docs/screenshots/main-interface.png)
 
-![Profils de téléchargement](docs/screenshots/download-profiles.png)
+![Download Presets](docs/screenshots/download-profiles.png)
 
-![Capture de flux](docs/screenshots/stream-capture.png)
+![Stream Capture](docs/screenshots/stream-capture.png)
 
-![Historique](docs/screenshots/history.png)
+![History](docs/screenshots/history.png)
 ```
 
 <!--
-Exemple GitHub avec user-attachments :
+GitHub user-attachments format:
 
-<img width="1600" alt="Universal Downloader" src="https://github.com/user-attachments/assets/TON-ID" />
+<img width="1600" alt="Universal Downloader" src="https://github.com/user-attachments/assets/YOUR-ID" />
 -->
 
 ---
 
+## 🔐 Electron Security Architecture
 
-## 🔐 Architecture de sécurité Electron
-
-Universal Downloader sépare l'interface et le moteur Electron.
+Universal Downloader strictly isolates the user interface from the system runtime.
 
 ```text
 Renderer HTML / CSS / JS
           ↓
       preload.js
           ↓
-     IPC contrôlé
+     Strict IPC
           ↓
       main.js
           ↓
 yt-dlp / FFmpeg / FFprobe / Deno
 ```
 
-Le renderer ne dispose pas d'un accès Node.js illimité.
+The renderer process does not have arbitrary Node.js access.
 
-Configuration Electron utilisée :
+Electron security baseline:
 
 ```text
 nodeIntegration: false
 contextIsolation: true
 ```
 
-Les outils externes sont lancés avec des arguments contrôlés sans passer par un shell de commande libre.
+External binaries are invoked using sanitized argument arrays, avoiding unsanitized command shell executions.
 
 ---
 
-### Cookies
+### Cookies Notice
 
-Ne sélectionne un navigateur que si le site nécessite réellement une session.
+Only load browser cookies when content cannot be retrieved anonymously.
 
-Pour les contenus publics :
+For standard public content:
 
 ```text
-Cookies : Aucun
+Cookies: None
 ```
 
-est généralement le meilleur choix.
+remains the safest and fastest option.
 
 ---
 
-### Espace disque
+### Disk Space
 
-Les téléchargements vidéo peuvent rapidement occuper beaucoup d'espace.
+Media downloads can quickly saturate storage drives.
 
-Le dossier par défaut est :
+Default storage directory:
 
 ```text
 UD_download
 ```
 
-Tu peux déplacer les fichiers importants ailleurs après téléchargement.
+Consider moving completed archives to long-term storage periodically.
 
 ---
 
-## ⚠️ Limitations
+## ⚠️ Known Limitations
 
-Universal Downloader dépend du comportement des plateformes distantes.
+Universal Downloader relies on external web infrastructure.
 
-Un site peut modifier à tout moment :
+Third-party platforms regularly update:
 
-- son lecteur vidéo
-- ses API
-- ses protections anti-bot
-- son authentification
-- ses formats
-- ses CDN
+- Video players
+- Internal APIs
+- Anti-bot heuristics
+- Authentication protocols
+- Delivery formats
+- CDN setups
 
-Une plateforme fonctionnant aujourd'hui peut donc nécessiter une mise à jour de yt-dlp demain.
-
-Universal Downloader ne garantit pas la compatibilité permanente avec chaque site.
+A service functional today may require a patched version of yt-dlp tomorrow. Permanent or uninterrupted compatibility with any specific platform cannot be guaranteed.
 
 ---
 
-## ⚖️ Avertissement légal
+## ⚖️ Legal Disclaimer
 
-Cet outil est fourni à des fins de convenance personnelle, d'archivage autorisé, de test et d'utilisation légitime.
+This utility is provided for personal archiving, legal backup, educational, and authorized media acquisition purposes only.
 
-Il est de la responsabilité de l'utilisateur de s'assurer qu'il possède le droit de télécharger ou d'enregistrer le contenu ciblé.
+Users are solely responsible for ensuring they hold the explicit right or authorization to download or record any target media.
 
-Veuillez respecter :
+Always comply with:
 
-- les lois sur le droit d'auteur de votre pays
-- les droits des créateurs
-- les licences applicables
-- les conditions d'utilisation des plateformes
+- Local copyright laws and intellectual property regulations
+- Creators' rights and applicable distribution licenses
+- Terms of Service governing third-party host platforms
 
-Le développeur de cet outil ne peut être tenu responsable d'une utilisation illégale ou non autorisée.
+The developer accepts no liability for misuse, illicit distribution, or copyright infringement committed with this software.
 
-Universal Downloader n'est pas destiné à contourner les DRM, les systèmes de chiffrement protégés ou les contrôles d'accès payants.
-
----
-
-## 🔧 Composants utilisés
-
-Universal Downloader s'appuie notamment sur :
-
-- **Electron** — application desktop
-- **yt-dlp** — extraction des informations et flux média
-- **FFmpeg** — traitement, fusion et conversion audio/vidéo
-- **FFprobe** — analyse des flux média
-- **Deno** — runtime JavaScript utilisé pour certaines fonctions yt-dlp
-
-Chaque composant tiers reste soumis à sa propre licence.
+Universal Downloader is neither engineered nor intended to circumvent DRM systems, digital rights encryption, or paywalled access controls.
 
 ---
 
-## 📝 Crédits
+## 🔧 Core Technologies
+
+Universal Downloader is built with:
+
+- **Electron** — Cross-platform desktop runtime
+- **yt-dlp** — Core media scraping and extraction engine
+- **FFmpeg** — Stream processing, remuxing, and audio transcoding
+- **FFprobe** — Media analysis and stream inspection
+- **Deno** — Lightweight JavaScript runtime used by select yt-dlp extractors
+
+All third-party modules and binaries remain under their respective licenses.
+
+---
+
+## 📝 Credits
 
 - **yt-dlp** — https://github.com/yt-dlp/yt-dlp
 - **Electron** — https://www.electronjs.org/
