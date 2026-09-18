@@ -3,8 +3,8 @@
 > **Portable Windows application for video/audio downloading, audio extraction, and stream capturing.**  
 > **Created by Orion4D — 2026**
 
-<img width="1547" height="1173" alt="image" src="https://github.com/user-attachments/assets/06df2840-4a19-40d4-88b0-c3d1cd60ad4b" />
-
+<img width="1348" height="1110" alt="image" src="https://github.com/user-attachments/assets/7669ce15-96e2-45ee-b6cf-4e595ffe52b8" />
+<img width="1346" height="1034" alt="image" src="https://github.com/user-attachments/assets/949ad98b-b8ed-47d3-b798-8eaf5331f0c9" />
 
 - **Latest release:** [Universal Downloader v2.0.0](https://github.com/orion4d/Universal_downloader_windows/releases/tag/v2.0.0)  
 - **Direct download:** [UniversalDownloader-v2.0.0-Portable-win-x64.zip](https://github.com/orion4d/Universal_downloader_windows/releases/download/v2.0.0/UniversalDownloader-v2.0.0-Portable-win-x64.zip)
