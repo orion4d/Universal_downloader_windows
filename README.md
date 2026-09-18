@@ -6,13 +6,31 @@
 <img width="1547" height="1173" alt="image" src="https://github.com/user-attachments/assets/06df2840-4a19-40d4-88b0-c3d1cd60ad4b" />
 
 
-- **Direct link:** [UniversalDownloader-v1.0.2-Portable-win-x64.zip](https://github.com/orion4d/Universal_downloader_windows/releases/download/v1.0.2/UniversalDownloader-v1.0.2-Portable-win-x64.zip)
+- **Latest release:** [Universal Downloader v2.0.0](https://github.com/orion4d/Universal_downloader_windows/releases/tag/v2.0.0)  
+- **Direct download:** [UniversalDownloader-v2.0.0-Portable-win-x64.zip](https://github.com/orion4d/Universal_downloader_windows/releases/download/v2.0.0/UniversalDownloader-v2.0.0-Portable-win-x64.zip)
 
 **Universal Downloader** is a portable Electron application powered by **yt-dlp**, **FFmpeg**, **FFprobe**, and **Deno**.
 
 It allows you to parse, download, convert, and capture media from numerous platforms, featuring a clean GUI, download queue, presets, local history, and built-in diagnostic tools.
 
 The interface is available in both **English** and **French**.
+
+---
+
+## 🤖 What's New in v2.0.0
+
+Version 2 adds a local AI automation layer while keeping all the downloading, conversion, queue, history and stream-capture features from v1.
+
+- **Local MCP integration** for Codex and compatible MCP clients
+- **Local Ollama assistant** with tool calling
+- **Real-time Ollama activity indicator** with current phase and elapsed time
+- **Natural-language batch downloads**
+- **Secure URL list import** from `.txt`, `.md` and `.csv` files
+- **Paste button** next to the main URL field
+- **Readable AI tool activity log**
+- **Automatic completion summary** when the model executes tools without returning a text answer
+
+Universal Downloader exposes only predefined actions to AI clients. It does **not** expose a generic shell or arbitrary command execution.
 
 ---
 
@@ -245,6 +263,98 @@ This makes troubleshooting local execution or binary issues fast and straightfor
 
 ---
 
+## 🧠 MCP / AI Local
+
+Universal Downloader v2 can expose a controlled local MCP interface for **Codex** and other compatible MCP clients.
+
+Typical actions include:
+
+```text
+Analyze a media URL
+Download with a predefined profile
+Download a thumbnail
+Capture a compatible stream
+Read queue status
+Read local history
+Run diagnostics
+```
+
+The application includes a **Copy Codex config** button to simplify local setup.
+
+MCP access is disabled until explicitly enabled in Universal Downloader. AI clients interact through predefined tools rather than unrestricted system commands.
+
+### Controlled automation
+
+Universal Downloader does not expose a generic shell such as `run_command`, `exec` or arbitrary filesystem execution.
+
+This keeps the AI layer focused on Universal Downloader operations instead of granting broad access to the computer.
+
+---
+
+## 🦙 Local Ollama Assistant
+
+Universal Downloader can also be driven by an **Ollama model running locally on your PC**.
+
+The app connects only to a local Ollama endpoint such as:
+
+```text
+http://127.0.0.1:11434
+```
+
+Main capabilities:
+
+- Natural-language media analysis
+- Video/audio downloads through profiles
+- Batch downloads from multiple URLs
+- Thumbnail downloads
+- Compatible stream capture
+- Queue and history queries
+- Built-in diagnostics
+- Tool-call activity displayed in real time
+
+A tool-calling capable Ollama model is required. **Gemma4 12B Q4_K_M** has been tested successfully with the v2 workflow.
+
+> Ollama is optional and is **not bundled** with Universal Downloader. It must be installed and running separately if you want to use the local AI assistant.
+
+### Ollama permissions
+
+The user can explicitly allow or deny download/capture actions. Ollama is not given access to:
+
+- arbitrary shell commands
+- arbitrary filesystem browsing
+- file deletion
+- yt-dlp updates
+
+---
+
+## 📄 Secure URL List Import
+
+The local assistant can work with URL lists selected by the user.
+
+Supported formats:
+
+```text
+.txt
+.md
+.csv
+```
+
+Universal Downloader extracts HTTP/HTTPS URLs from the selected file and can queue them using natural-language instructions such as:
+
+```text
+Download all URLs from this file in 1080p.
+```
+
+or:
+
+```text
+Download all URLs from this file as MP3 320 kbps.
+```
+
+The file importer is deliberately restricted and does not provide the model with unrestricted filesystem access.
+
+---
+
 ## 🔒 YouTube Privacy Mode
 
 Universal Downloader features a **YouTube Privacy Mode**, enabled by default.
@@ -377,9 +487,9 @@ No system registry modifications or installation wizards.
 
 ---
 
-## ✅ Zero External Dependencies
+## ✅ Zero External Dependencies for Core Downloading
 
-The portable bundle ships with all runtime requirements included.
+The portable bundle ships with the runtime requirements needed for Universal Downloader itself.
 
 You do **not** need to install:
 
@@ -393,7 +503,9 @@ Deno
 yt-dlp
 ```
 
-All engines are embedded and pre-configured.
+All core engines are embedded and pre-configured.
+
+**Ollama is the only optional external component**: install it separately only if you want to use the local AI assistant.
 
 ---
 
@@ -468,6 +580,63 @@ The resulting PNG image is placed directly into the `UD_download` folder.
 
 ---
 
+### 6. Using Codex via MCP
+
+```text
+1. Enable MCP / Local AI in Universal Downloader
+2. Click Copy Codex config
+3. Add the generated configuration to Codex
+4. Restart/reload Codex if required
+5. Ask Codex to analyze or download media through Universal Downloader
+```
+
+Example:
+
+```text
+Analyze this URL with Universal Downloader, then download it as MP3 320 kbps.
+```
+
+---
+
+### 7. Using the Local Ollama Assistant
+
+```text
+1. Start Ollama on the PC
+2. Enable the Ollama assistant in Universal Downloader
+3. Keep the default local server: http://127.0.0.1:11434
+4. Click Refresh and choose a tool-calling compatible model
+5. Optionally allow download/capture actions
+6. Enter a natural-language instruction in the assistant panel
+```
+
+Example:
+
+```text
+Download these videos in 1080p and also save their thumbnails.
+```
+
+---
+
+### 8. Importing a URL List
+
+Use **URL File** in the Ollama panel to select a `.txt`, `.md` or `.csv` file.
+
+Example file:
+
+```text
+https://www.youtube.com/watch?v=example1
+https://vimeo.com/example2
+https://www.youtube.com/shorts/example3
+```
+
+Then ask:
+
+```text
+Download all links from this file at maximum quality.
+```
+
+---
+
 ## 📁 Portable Directory Layout
 
 The application operates within its self-contained directory:
@@ -476,6 +645,8 @@ The application operates within its self-contained directory:
 UniversalDownloader/
 ├── UniversalDownloader.exe
 ├── resources/
+│   ├── bin/
+│   └── mcp/
 ├── UD_download/
 └── UD_data/
 ```
@@ -548,8 +719,10 @@ Renderer HTML / CSS / JS
      Strict IPC
           ↓
       main.js
-          ↓
-yt-dlp / FFmpeg / FFprobe / Deno
+       ↙     ↘
+ Core media   Controlled AI bridge
+    ↓              ↓
+yt-dlp / FFmpeg   MCP / Ollama tools
 ```
 
 The renderer process does not have arbitrary Node.js access.
@@ -637,6 +810,8 @@ Universal Downloader is built with:
 - **FFmpeg** — Stream processing, remuxing, and audio transcoding
 - **FFprobe** — Media analysis and stream inspection
 - **Deno** — Lightweight JavaScript runtime used by select yt-dlp extractors
+- **Model Context Protocol (MCP)** — Controlled integration with Codex and compatible AI clients
+- **Ollama API** — Optional local model integration and tool calling
 
 All third-party modules and binaries remain under their respective licenses.
 
@@ -648,6 +823,8 @@ All third-party modules and binaries remain under their respective licenses.
 - **Electron** — https://www.electronjs.org/
 - **FFmpeg** — https://ffmpeg.org/
 - **Deno** — https://deno.com/
+- **Model Context Protocol** — https://modelcontextprotocol.io/
+- **Ollama** — https://ollama.com/
 
 ---
 
