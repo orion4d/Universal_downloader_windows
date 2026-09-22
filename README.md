@@ -17,12 +17,29 @@ The interface is available in both **English** and **French**.
 
 ---
 
+## 🤖 What's New in v3.1.0
+Version 3.1 adds **native batch URL list management** without requiring Codex or Ollama.
+
+Main additions:
+
+- Import URL lists from `.txt`, `.md`, and `.csv`
+- Automatic extraction of HTTP/HTTPS links
+- Duplicate URL removal
+- Native multi-selection interface
+- Range selection, filtering, and batch queueing
+- Multi-URL clipboard support
+- Clear loaded playlist / URL list
+- Full application Reset
+- Faster first-run setup by skipping already installed tools
+
+Each imported URL is analyzed automatically when it reaches the download queue.
+
+
 ## 🤖 What's New in v3.0.0
 - Version 3 adds full **YouTube playlist support** to Universal Downloader while preserving all downloading, MCP and local Ollama features introduced in v2.
 
 
 ## 🤖 What's New in v2.0.0
-
 Version 2 adds a local AI automation layer while keeping all the downloading, conversion, queue, history and stream-capture features from v1.
 
 - **Local MCP integration** for Codex and compatible MCP clients
