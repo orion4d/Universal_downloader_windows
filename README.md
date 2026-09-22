@@ -700,34 +700,6 @@ This self-contained structure ensures real portability without leaving files beh
 
 ---
 
-## 🖼️ Screenshots
-
-You can store your screenshots in:
-
-```text
-docs/screenshots/
-```
-
-Reference them in Markdown like this:
-
-```markdown
-![Main Interface](docs/screenshots/main-interface.png)
-
-![Download Presets](docs/screenshots/download-profiles.png)
-
-![Stream Capture](docs/screenshots/stream-capture.png)
-
-![History](docs/screenshots/history.png)
-```
-
-<!--
-GitHub user-attachments format:
-
-<img width="1600" alt="Universal Downloader" src="https://github.com/user-attachments/assets/YOUR-ID" />
--->
-
----
-
 ## 🔐 Electron Security Architecture
 
 Universal Downloader strictly isolates the user interface from the system runtime.
