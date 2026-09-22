@@ -6,7 +6,7 @@
 <img width="1348" height="1110" alt="image" src="https://github.com/user-attachments/assets/7669ce15-96e2-45ee-b6cf-4e595ffe52b8" />
 <img width="1346" height="1034" alt="image" src="https://github.com/user-attachments/assets/949ad98b-b8ed-47d3-b798-8eaf5331f0c9" />
 
-- **Latest release:** [Universal Downloader v3.0.0](https://github.com/orion4d/Universal_downloader_windows/releases/tag/V3.0.0)  
+- **Latest release:** [Universal Downloader v3.0.0](https://github.com/orion4d/Universal_downloader_windows/releases/tag/v3.1.0)  
 - **Direct download:** [UniversalDownloader-v3.0.0-Portable-win-x64.zip](https://github.com/orion4d/Universal_downloader_windows/releases/download/V3.0.0/UniversalDownloader-v3.0.0-alpha.1-Portable-win-x64.zip)
 
 **Universal Downloader** is a portable Electron application powered by **yt-dlp**, **FFmpeg**, **FFprobe**, and **Deno**.
